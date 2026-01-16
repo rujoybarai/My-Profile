@@ -1,6 +1,7 @@
 import React from 'react'
 import { LuExternalLink } from "react-icons/lu"
 import { FiGithub } from "react-icons/fi"
+import { motion } from 'framer-motion'
 
 export default function ProjectSection() {
     const ProjectList=[{
@@ -36,7 +37,14 @@ export default function ProjectSection() {
         {
             ProjectList.map((item,i) =>(
                 
-                <div className='project-box' key={i} >
+                <motion.div className='project-box' key={i} 
+                
+                  whileHover={{
+                  scale: 1.15,
+                  boxShadow: "0px 0px 30px  rgba(134, 0, 230, 0.82)",
+  }}
+  transition={{ duration: 0.3 }}
+                >
             <h4>{item.title}</h4>
             <p style={{width:'200px'}}>{item.details}</p>
             <div className='tags'>
@@ -53,7 +61,7 @@ export default function ProjectSection() {
                 
             </div>
 
-        </div>
+        </motion.div>
             ))
             
         }

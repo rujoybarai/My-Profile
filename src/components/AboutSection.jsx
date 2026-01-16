@@ -7,16 +7,41 @@ import { GiAirplaneDeparture } from "react-icons/gi"
 import { FaMoneyCheckAlt } from "react-icons/fa"
 import { TbCricket } from "react-icons/tb"
 import { FaLaptopCode } from "react-icons/fa"
+import { motion } from 'framer-motion'
 
 export default function AboutSection() {
+    const fadeUp = {
+      hidden: { opacity: 0, x: -100 },
+      show: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 1  }
+  }
+
+};
+  
+    const fadeUp2 ={
+       hidden :{opacity: 0 , x:100  },
+       show:{opacity:1, x:0,transition:{duration: 1}}
+  }; 
   return (
     <div className="about-section">
         <h2>About Me</h2>
-        <p>Hi, I’m Rujoy Barai, a Computer Science student at United International University (UIU). I’m passionate about web development and programming, and I enjoy exploring new technologies to create useful project</p>
+        <motion.p 
+        initial={{opacity:0,scale:0.7}}
+         whileInView={{opacity:1,scale:1,transition:{duration:1}}}
+         viewport={{ once: true }}
+        
+        >Hi, I’m Rujoy Barai, a Computer Science student at United International University (UIU). I’m passionate about web development and programming, and I enjoy exploring new technologies to create useful project</motion.p>
         <div className="about-content">
             <div className='personal-details'>
                 <h2>Personal Details</h2>
-                <ul>
+                <motion.ul
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                >
                     <li><strong>Name: </strong> <span>Rujoy Barai</span></li>
                     <li><strong>Profession:</strong> <span>Frontend Developer</span></li>
                     <li><strong>Specialization:</strong> <span>React.js, JavaScript</span></li>
@@ -27,11 +52,17 @@ export default function AboutSection() {
                      <li><strong>HSC:</strong> <span>2024(GPA 5)</span></li>
                     <li><strong>SSC:</strong> <span>2022(GPA 5)</span></li>
                     <li><strong>Address:</strong> <span>Dhaka, Bangladesh</span></li>
-                </ul>
+                </motion.ul>
             </div>
             <div className='my-interest'>
                 <h2>My Interests</h2>
-                <div className='interest-box'>
+                <motion.div className='interest-box'
+                 variants={fadeUp2}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                
+                >
                 <div className='Box1'>
                     <IoGameController size={25} color="white" id='box-child' />
                     <p>Gaming</p>
@@ -65,7 +96,7 @@ export default function AboutSection() {
                     <p>Coding</p>
                 </div>
                
-                </div>
+                </motion.div>
             </div>
 
         </div>

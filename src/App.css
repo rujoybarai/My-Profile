@@ -20,6 +20,17 @@
   color: aliceblue;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+.Logo h2{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.Logo h2 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
 .nav-list{
   display: flex;
   position: absolute;
@@ -229,6 +240,12 @@
  
 
 }
+.personal-details ul li:hover{
+  background-color: burlywood;
+  transform: scale(1.05);
+  transition: 0.5s;
+  cursor: pointer;
+}
 .personal-details ul li strong{
  color: rgb(255, 255, 255);
 }
@@ -271,6 +288,12 @@
   box-shadow: 2px 2px 10px rgb(117, 117, 117);
   
   
+}
+.Box1:hover{
+ transform: scale(0.8);
+transition-duration: 0.7s;
+opacity: 0.8;
+
 }
 .Box1 #box-child{
   margin-top: 5px;
