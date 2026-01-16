@@ -28,7 +28,7 @@ export default function ProjectSection() {
 
 
 ]
-    console.log(ProjectList)
+   
   return (
     <div className='project-section'>
      <h2>Project</h2>

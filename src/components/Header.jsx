@@ -16,7 +16,7 @@ export default function Header({scrollToContact}) {
             
             whileTap={{ scale: 0.95 }}
             
-            ><a htmlHref='/'>Home</a></motion.li>
+            ><a htmlhref='/'>Home</a></motion.li>
             <motion.li
               whileHover={{ scale: 1.1 }}
             

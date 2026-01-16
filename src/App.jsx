@@ -8,9 +8,11 @@ import SkillSection from './components/SkillSection.jsx'
 import ProjectSection from './components/ProjectSection.jsx'
 import ContactSection from './components/ContactSection.jsx'
 import { useRef } from 'react'
+import { useState } from 'react'
 
 function App() {
   const contactRef = useRef(null)
+  const [ShowMassage,setShowMassage]=useState();
 
   const scrollToContact = () => {
     contactRef.current?.scrollIntoView({ behavior: 'smooth' })
@@ -19,11 +21,11 @@ function App() {
   return (
     <div  className="App">
       <Header  scrollToContact={scrollToContact}/>
-      <Profile />
+      <Profile ShowMassage={ShowMassage}/>
       <AboutSection />
       <SkillSection/>
       <ProjectSection/>
-      <ContactSection ref={contactRef}/>
+      <ContactSection ref={contactRef} setShowMassage={setShowMassage}/>
     </div>
   )
 }
