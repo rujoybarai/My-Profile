@@ -9,6 +9,8 @@ import ProjectSection from './components/ProjectSection.jsx'
 import ContactSection from './components/ContactSection.jsx'
 import { useRef } from 'react'
 import { useState } from 'react'
+import { Analytics } from "@vercel/analytics/react"
+
 
 function App() {
   const contactRef = useRef(null)
@@ -26,6 +28,7 @@ function App() {
       <SkillSection/>
       <ProjectSection/>
       <ContactSection ref={contactRef} setShowMassage={setShowMassage}/>
+        <Analytics />
     </div>
   )
 }
