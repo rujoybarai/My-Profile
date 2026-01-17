@@ -7,6 +7,7 @@ export default function Profile({ShowMassage}) {
     <div className="profile">
 
         <div className="profile-card">
+      
             <ProfilePic />
             <ProfileDetails  ShowMassage={ShowMassage}/>
 

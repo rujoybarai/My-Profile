@@ -30,7 +30,7 @@ export default function AboutSection() {
         <motion.p 
         initial={{opacity:0,scale:0.7}}
          whileInView={{opacity:1,scale:1,transition:{duration:1}}}
-         viewport={{ once: true }}
+         
         
         >Hi, I’m Rujoy Barai, a Computer Science student at United International University (UIU). I’m passionate about web development and programming, and I enjoy exploring new technologies to create useful project</motion.p>
         <div className="about-content">
@@ -40,7 +40,7 @@ export default function AboutSection() {
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: true }}
+               
                 >
                     <li><strong>Name: </strong> <span>Rujoy Barai</span></li>
                     <li><strong>Profession:</strong> <span>Frontend Developer</span></li>
@@ -60,7 +60,7 @@ export default function AboutSection() {
                  variants={fadeUp2}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: true }}
+               
                 
                 >
                 <div className='Box1'>

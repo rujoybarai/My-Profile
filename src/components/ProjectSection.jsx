@@ -14,14 +14,14 @@ export default function ProjectSection() {
     {
         title:"Todo-app",
         details:"A simple Todo App built using React.js and JavaScript, allowing users to add, edit, and delete tasks with an intuitive UI.",
-        tags:["JavaScript","Bootstrap"],
+        tags:["React","Bootstrap"],
         link:"https://todo-app-version2.vercel.app/",
         gitLink:'https://github.com/rujoybarai',
     },
     {
         title:"Form-template",
         details:"React.js form template with customizable fields and smooth interaction — built with JavaScript.",
-        tags:["JavaScript","Bootstrap"],
+        tags:["React","Bootstrap"],
         link:"https://form-template-orpin.vercel.app/",
         gitLink:'https://github.com/rujoybarai',
     }
@@ -38,12 +38,15 @@ export default function ProjectSection() {
             ProjectList.map((item,i) =>(
                 
                 <motion.div className='project-box' key={i} 
-                
+                  initial={{opacity:0}}
                   whileHover={{
                   scale: 1.15,
                   boxShadow: "0px 0px 30px  rgba(134, 0, 230, 0.82)",
-  }}
-  transition={{ duration: 0.3 }}
+                  }}
+                  transition={{ duration: 0.3 }}
+                  whileInView={{ opacity:1,transition:{duration:1.5}}}
+                 
+
                 >
             <h4>{item.title}</h4>
             <p style={{width:'200px'}}>{item.details}</p>

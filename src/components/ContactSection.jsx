@@ -14,7 +14,9 @@ const {setShowMassage}=props;
  const handleSubmit =(event)=>{
     event.preventDefault();
     const Name =UseName.current.value;
-    setShowMassage(Name);
+    const Email =UseEmail.current.value;
+    const Mass =UseMass.current.value;
+    setShowMassage(Name,Email,Mass);
     
  
     setDone({

@@ -75,6 +75,17 @@
   
 
 }
+
+.profile .Masse{
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  background-color: rgb(179, 227, 222);
+  border-radius: 20px;
+  left: 50px;
+  bottom: 0px;
+  z-index: 99;
+}
 .profile-card{
   width: 100%;
   margin-top:60%;
