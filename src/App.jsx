@@ -44,7 +44,7 @@ useEffect(()=>{
   return (
     <div  className="App">
     
-      <Header  scrollToContact={scrollToContact} scrollMassge={scrollMassge}/>
+      <Header  scrollToContact={scrollToContact} scrollMassge={scrollMassge} ShowMassage={ShowMassage}/>
       <Profile  />
       <AboutSection />
       <SkillSection/>

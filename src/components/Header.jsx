@@ -5,7 +5,7 @@ import { MdForwardToInbox } from "react-icons/md"
 
 
 
-export default function Header({scrollToContact,scrollMassge}) {
+export default function Header({scrollToContact,scrollMassge,ShowMassage}) {
 
   return (
     <div className="header">
@@ -27,12 +27,12 @@ export default function Header({scrollToContact,scrollMassge}) {
             whileTap={{ scale: 0.95 }}
             ><a onClick={scrollToContact} >Contact Me</a></motion.li>
            
-            <motion.li
+            {ShowMassage !== null && (<motion.li
               whileHover={{ scale: 1.1 }}
             
             whileTap={{ scale: 0.95 }}
            
-            ><a  onClick={scrollMassge} ><MdForwardToInbox  /></a></motion.li>
+            ><a  onClick={scrollMassge} ><MdForwardToInbox  /></a></motion.li>)}
           
         </ul>
     </div>
